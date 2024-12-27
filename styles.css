@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4e1f1;
+  color: #4b2e83;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #d7aefc;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  background-color: #4b2e83;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e8daef;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+/* Where It Began Section */
+.where-it-began {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.photo {
+  width: 300px; /* Default size */
+  height: 300px;
+  perspective: 1000px;
+  position: relative;
+  margin: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg); /* Start flipped */
+  transition: transform 0.8s ease-in-out; /* Smooth transition */
+}
+
+.photo .back {
+  width: 100%;
+  height: 100%;
+  background-color: #d7aefc; /* Light purple */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(0); /* Show message first */
+  padding: 10px;
+  text-align: center;
+  font-size: 1em;
+  transition: transform 0.8s ease-in-out; /* Smooth transition */
+}
+
+.photo:hover img {
+  transform: rotateY(0); /* Flip to reveal picture */
+}
+
+.photo:hover .back {
+  transform: rotateY(180deg); /* Flip to hide message */
+}
+
+/* Second Photo Styles (Bigger) */
+.photo-container .photo:last-child {
+  width: 400px; /* Increased width */
+  height: 400px; /* Increased height */
+}
+
+.photo-container .photo:last-child img,
+.photo-container .photo:last-child .back {
+  border-radius: 15px; /* Slightly more rounded for larger size */
+}
+
+/* Message Section */
+.message {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 2px solid #d7aefc;
+  border-radius: 10px;
+  color: #4b2e83;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #d7aefc;
+  color: white;
+  margin-top: 20px;
+}
+
+.footer-text {
+  font-family: 'Cursive', cursive;
+}
